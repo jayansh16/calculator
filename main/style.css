@@ -1,40 +1,46 @@
-@import url('https://cdnfonts.com');
 
 :root,
 * {
   padding: 0;
   margin: 0;
-  font-family: 'Calculator', sans-serif;
-  background: rgb(15, 12, 12);
+  font-family:  Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
   color: #000000
 }
 
-.root {
-  width: 80vw;
-  height: 80vh;
-  min-width: 320px;
-  max-width: 1200px;
-  min-height: 400px;
-  max-height: 800px;
+#root {
+  width: 100vw;
+  height: 100vh;
+  background-color: #000000;
 }
-
+#head{
+  position: absolute;
+  z-index: 1;
+}
 .screen {
+  position: absolute;
   background-color: #242121;
-  height: 20vh;
+  height: 18.5vh;
   width: 90vw;
+  z-index: 1;
 }
 
 .btns {
   position: absolute;
-  height: 19vh;
-  width: 25vw;
+  z-index: 1;
+  top: 25vh;
+
+}
+
+.val-btn {
+  height: 15vh;
+  width: 20.5vw;
+  background-color: #131212;
   border-radius: 20px;
 }
 
-.btns>.val-btn {
-  background-color: #131212;
-}
-
-.btns>.equal-btn {
+.equal-btn {
+  height: 15vh;
+  width: 20.5vw;
   background-color: #ff3c00;
+  border-radius: 20px;
 }
