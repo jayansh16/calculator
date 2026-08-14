@@ -1,8 +1,10 @@
-export default function btn(props){
+export default function Btn(props){
+    return(
     <button
     onClick={props.func}
-    className="val-btn"
+    className={(props.types==="equal")?"equal-btn":"val-btn"}
     >
         {props.value}
     </button>
+    )
 }
