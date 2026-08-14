@@ -3,7 +3,6 @@ import Btn from "./btn.jsx"
 export default function App(){
     const btnvalues=["clear","<X","(",")","1","2","3","+","4","5","6","-","7","8","9","*",".","0","=","/"]
     const [screen,setscreen]=useState([])
-    const [ans,setans]=useState(null)
     const [ansshown,setshown]= useState(false)
     function answer() {
     try {
@@ -14,7 +13,6 @@ export default function App(){
 }
     function handleinput(event){
         const val=event.target.value;
-        setans(answer())
         if (["1","2","3","+","4","5","6","-","7","8","9","*",".","0","/","(",")"].includes(val)){
             setscreen((prev) => 
             [...prev,val])
@@ -23,14 +21,14 @@ export default function App(){
         }
         else if (val==="clear"){
             setscreen([])
-            setans(null)
             setshown(false)
         }else if (val==="="){
             setshown(true)
         }
-        const ans = answer();
+        
 
     }
+    const ans = answer();
     return(
         <>
         <h1 id="Head">CALCULATOR</h1>
